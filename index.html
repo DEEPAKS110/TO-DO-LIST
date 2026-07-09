@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Smart To-Do List</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background-blur"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- ================= Sidebar ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+
+                <div class="logo-text">
+                    <h2>TaskFlow</h2>
+                    <span>Task Manager</span>
+                </div>
+
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li class="active">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-list-check"></i>
+                        All Tasks
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        Pending
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Completed
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-star"></i>
+                        Important
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Today
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+        <!-- ================= Main ================= -->
+
+        <main class="main-content">
+
+            <!-- Header -->
+
+            <header class="header">
+
+                <div class="header-left">
+
+                    <h1>Welcome Back 👋</h1>
+                    <p>Stay productive and organize your daily tasks.</p>
+
+                </div>
+
+                <div class="header-right">
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" placeholder="Search Tasks...">
+
+                    </div>
+
+                    <button class="theme-btn">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <div class="profile">
+
+                        <img src="https://i.pravatar.cc/100" alt="profile">
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- Dashboard Cards -->
+
+            <section class="dashboard-cards">
+
+                <div class="card">
+
+                    <div class="card-icon blue">
+                        <i class="fa-solid fa-list"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h2>28</h2>
+                        <p>Total Tasks</p>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-icon green">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h2>18</h2>
+                        <p>Completed</p>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-icon orange">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h2>10</h2>
+                        <p>Pending</p>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-icon red">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h2>5</h2>
+                        <p>Due Today</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Add Task -->
+
+            <section class="task-form">
+
+                <div class="section-title">
+
+                    <h2>Add New Task</h2>
+
+                </div>
+
+                <form>
+
+                    <div class="input-group">
+
+                        <label>Task Title</label>
+
+                        <input type="text" placeholder="Enter Task Title">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Description</label>
+
+                        <textarea rows="4"
+                            placeholder="Task Description"></textarea>
+
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>Priority</label>
+
+                            <select>
+
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Due Date</label>
+
+                            <input type="date">
+
+                        </div>
+
+                    </div>
+
+                    <button class="add-btn">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Task
+
+                    </button>
+
+                </form>
+
+            </section>
+
+            <!-- Filters -->
+
+            <section class="filters">
+
+                <button class="active">
+                    All
+                    <span>28</span>
+                </button>
+
+                <button>
+                    Pending
+                    <span>10</span>
+                </button>
+
+                <button>
+                    Completed
+                    <span>18</span>
+                </button>
+
+                <button>
+                    High
+                    <span>5</span>
+                </button>
+
+                <button>
+                    Medium
+                    <span>12</span>
+                </button>
+
+                <button>
+                    Low
+                    <span>11</span>
+                </button>
+
+            </section>
+
+            <!-- Tasks -->
+
+            <section class="task-list">
+
+                <div class="section-title">
+
+                    <h2>Today's Tasks</h2>
+
+                </div>
+
+                <!-- Card -->
+
+                <div class="task-card">
+
+                    <div class="task-left">
+
+                        <input type="checkbox">
+
+                        <div>
+
+                            <h3>Complete JavaScript Project</h3>
+
+                            <p>
+                                Build the TaskFlow frontend using HTML,
+                                CSS and JavaScript.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="task-right">
+
+                        <span class="priority high">High</span>
+
+                        <span class="date">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            Today
+
+                        </span>
+
+                        <button>
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button>
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card -->
+
+                <div class="task-card completed">
+
+                    <div class="task-left">
+
+                        <input type="checkbox" checked>
+
+                        <div>
+
+                            <h3>Practice Node.js</h3>
+
+                            <p>
+
+                                Learn Express Routing and APIs.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="task-right">
+
+                        <span class="priority medium">
+
+                            Medium
+
+                        </span>
+
+                        <span class="date">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            Tomorrow
+
+                        </span>
+
+                        <button>
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button>
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card -->
+
+                <div class="task-card">
+
+                    <div class="task-left">
+
+                        <input type="checkbox">
+
+                        <div>
+
+                            <h3>Upload Portfolio</h3>
+
+                            <p>
+
+                                Deploy portfolio on Vercel.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="task-right">
+
+                        <span class="priority low">
+
+                            Low
+
+                        </span>
+
+                        <span class="date">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            Friday
+
+                        </span>
+
+                        <button>
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </button>
+
+                        <button>
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Floating Add Button -->
+
+    <button class="floating-btn">
+
+        <i class="fa-solid fa-plus"></i>
+
+    </button>
+
+    <!-- Toast -->
+
+    <div class="toast">
+
+        Task Added Successfully
+
+    </div>
+
+    <!-- Loader -->
+
+    <div class="loader">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- JS -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
